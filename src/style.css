@@ -40,7 +40,21 @@ body {
     Asi puedp marcar que se puede ver en que orden*/
     z-index: 2 ;
 }
-.tarjeta:hover{
+.tarjeta.active{
     /*Para que gire la tarjeta en 180g al poner la mamno sobre la tarjeta*/
     transform: rotateY(180deg); 
+}
+
+.tarjeta >div{
+    padding: 30px;
+    border-radius: 15px;
+    min-height: 315px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 0 rgba(90, 116, 148, 0.3);
+}
+.tarjeta .delantera{
+    width: 100%;
+    background: url(img/fondo-tarjeta/estrellas.jpg);
 }
