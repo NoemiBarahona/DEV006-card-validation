@@ -56,5 +56,5 @@ body {
 }
 .tarjeta .delantera{
     width: 100%;
-    background: url(img/fondo-tarjeta/estrellas.jpg);
+    background: url(../img/fondo-tarjeta/estrellas.jpg);
 }
