@@ -1,0 +1,46 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #ddeefc;
+    font-family: 'lato',sans-serif;
+}
+.cotenedor{
+    width: 90%;
+    max-width : 1000px ;
+    padding: 40px 20px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    /*align es para centar el contenido que trbaja con el flex*/
+    align-items: center;
+}
+/*Estilos de la tarjeta*/
+.tarjeta {
+    /*Tamaño de la tarjeta*/
+    width: 100%;
+    max-width: 550px;
+    /*para la animacion quede detras y no quede debajp¿o*/
+    position: relative;
+    color: white;
+    /*Para realizar la transicion de tarjeta delantera a trasera*/
+    transition: .3s ease all;
+    /*PAra que no se rote la imagen*/
+    transform: rotateY(0deg);
+    /*Para que se vea el revrso de la tarjeta*/
+    transform-style: preserve-3d;
+    /*Para que la parte de atras este invisible mientras se ve una parte de la tarjeta*/
+    backface-visibility: hidden;
+    /*Para mostrar una manito de leccinar un elemento*/
+    cursor: pointer;
+    /*Es para separar todo por capaz asi no se sobre ponen las cosas
+    Asi puedp marcar que se puede ver en que orden*/
+    z-index: 2 ;
+}
+.tarjeta:hover{
+    /*Para que gire la tarjeta en 180g al poner la mamno sobre la tarjeta*/
+    transform: rotateY(180deg); 
+}
