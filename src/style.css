@@ -8,9 +8,9 @@ body {
     background: #ddeefc;
     font-family: 'lato',sans-serif;
 }
-.cotenedor{
+.contenedor {
     width: 90%;
-    max-width : 1000px ;
+    max-width : 1000px;
     padding: 40px 20px;
     margin: auto;
     display: flex;
@@ -54,18 +54,48 @@ body {
     justify-content: space-between;
     box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
 }
+
 .tarjeta .delantera {
     width: 100%;
-    background: url(../img/fondo-tarjeta/constelacion.jpg);
+    background: url(../img/fondo-tarjeta/estrellas.jpg);
     background-size: cover;
 }
-.delantera .logos-marca{
+
+.delantera .logo-marca{
     text-align: right;
     min-height: 50px;   
 }
-.delantera .logos-marca img{
+
+.delantera .logo-marca img{
     width: 100%;
     height: 100%;
     object-fit: cover;
-    max-width: 80%;
+    max-width: 80px;
+}
+
+.delantera .chip{
+    width: 100%;
+    max-width: 50px;
+    margin-bottom: 20px;
+}
+
+.delantera .grupo .label{
+    font-size: 16px;
+    color: azure;
+    margin-bottom: 5px;
+}
+
+.delantera .grupo .numero,
+.delantera .grupo .nombre,
+.delantera .grupo .expiracion{
+    color: white;
+    font-size: 22px;
+    /*Es para que esten en mayusculas*/
+    text-transform: uppercase;
+}
+
+.delantera .flexbox{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
