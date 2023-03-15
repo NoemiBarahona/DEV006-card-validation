@@ -54,10 +54,10 @@ body {
     justify-content: space-between;
     box-shadow: 0 10px 10px 0 rgba(90, 116, 148, 0.3);
 }
-
+/*---------------Tarjeta delantera---------------*/
 .tarjeta .delantera {
     width: 100%;
-    background: url(../img/fondo-tarjeta/estrellas.jpg);
+    background: url(../img/fondo-tarjeta/constelacion.jpg);
     background-size: cover;
 }
 
@@ -98,4 +98,44 @@ body {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+}
+/*---------------Tarjeta reverso---------------*/
+.reverso {
+    background: url(../img/fondo-tarjeta/cielo.jpg);
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    transform: rotateY(180deg);
+    backface-visibility: hidden;
+}
+.reverso {
+    margin-top: 60px;
+    display: flex;
+    justify-content: left;
+}
+
+.reverso .datos p{
+    margin-bottom: 5px;
+}
+
+.reverso .datos #ccv{
+    width: 20%;
+}
+
+.reverso .datos #ccv .ccv{
+    background: white;
+    height: 40px;
+    color: black;
+    padding: 10px;
+    text-align: center;
+}
+
+.reverso .ley{
+    font-size: 14px;
+    line-height: 24spx;
+}
+
+.reverso .link{
+    font-size: 14px;
+    color: white;
 }
