@@ -40,6 +40,10 @@
 <!--Tarjeta de reverso-->
           <div class="reverso">
             <div class="datos">
+              <div class="grupo" id="firma">
+                <p class="label">firma</p>
+                <div class="firma"><p></p></div>
+              </div>
               <div class="grupo" id="ccv">
                 <p class="label">CCV</p>
                 <p class="ccv"></p>
@@ -52,10 +56,34 @@
 
 <!--Contenedor del boton para abrir el formulario-->
         <div class="contenedor-boton" >
-          <button class="boton-abrir-formulario" id="boton-abrir-formulario"></button>
+          <button class="boton-abrir-formulario" id="boton-abrir-formulario">
             <i class="fa fa-plus"></i>
+          </button>
         </div>
 <!--Formulario-->
+        <form action="" id="formularioTarjeta" class="formularioTarjeta">
+          <div class="grupo">
+            <label for="inputNumero">Número tarjeta</label>
+            <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
+          </div>
+          <div class="grupo">
+            <label for="inputNombre">Nombre tarjeta </label>
+            <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
+          </div>
+          <div class="flexbox">
+            <div class="grupo expiracion">
+              <label for="selectMes">Expiración</label>
+              <div class="flexbox">
+                <div class="grupo-select">
+                  <select name="mes" id="selectMes">
+                    <option desabled selected>Mes</option>
+                  </select>
+                  <i class="fas fa-angle-down"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+        </form>
        </div>
     </main>
     <footer></footer>
