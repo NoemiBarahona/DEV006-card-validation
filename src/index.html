@@ -53,7 +53,6 @@
             <a href="#" class="link">www.awawe.cl</a>
           </div>
         </section>
-
 <!--Contenedor del boton para abrir el formulario-->
         <div class="contenedor-boton" >
           <button class="boton-abrir-formulario" id="boton-abrir-formulario">
@@ -63,26 +62,43 @@
 <!--Formulario-->
         <form action="" id="formularioTarjeta" class="formularioTarjeta">
           <div class="grupo">
+<!-- Grupo tarjeta-->
             <label for="inputNumero">Número tarjeta</label>
             <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
           </div>
+<!-- Grupo nombre-->
           <div class="grupo">
             <label for="inputNombre">Nombre tarjeta </label>
             <input type="text" id="inputNombre" maxlength="19" autocomplete="off">
           </div>
+<!-- Grupo expriacion-->
           <div class="flexbox">
             <div class="grupo expiracion">
               <label for="selectMes">Expiración</label>
               <div class="flexbox">
+<!-- Grupo mes-->
                 <div class="grupo-select">
                   <select name="mes" id="selectMes">
                     <option desabled selected>Mes</option>
                   </select>
-                  <i class="fas fa-angle-down"></i>
+                  <i class="fa-solid fa-angle-down"></i>
+                </div>
+<!-- Grupo año-->
+                <div class="grupo-select">
+                  <select name="year" id="selectYear">
+                    <option desabled selected>Año</option>
+                  </select>
+                  <i class="fa-solid fa-angle-down"></i>
                 </div>
               </div>
             </div>
+<!-- grupo de ccv-->
+            <div class="grupo ccv">
+              <label for="inputCCV">CCV</label>
+              <input type="text" id="inputCCV" maxlength="3">
+            </div>
           </div>
+          <button type="submit" class="boton-enviar">Enviar</button>
         </form>
        </div>
     </main>
