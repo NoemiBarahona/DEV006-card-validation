@@ -164,3 +164,40 @@ body {
 .contenedor-boton .boton-abrir-formulario.active{
     transform: rotate(45deg);
 }
+/*---------------Formulario de tarjeta---------------*/
+
+.formularioTarjeta{
+    background: white;
+    width: 100%;
+    max-width: 700px;
+    padding: 150px 30px 30px 30px;
+    border-radius: 10px;
+    position: relative;
+    top: -150px;
+    z-index: 1;
+    clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    transition: clip-path .3s ease-out;
+}
+
+.formularioTarjeta.active{
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+}
+
+.formularioTarjeta label{
+    display: block;
+    color: gray;
+    margin-bottom: 5px;
+    font-size: 16px;
+}
+
+.formularioTarjeta input,
+.formularioTarjeta select,
+.botonEnviar{
+    border: 2px solid #ced6e0;
+    font-size: 18px;
+    height: 50px;
+    width: 100%;
+    padding: 5px;
+    transition: 3.s ease all;
+    border-radius: 5px;
+}
