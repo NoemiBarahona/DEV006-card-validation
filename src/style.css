@@ -183,6 +183,14 @@ body {
 .contenedor-boton .boton-abrir-formulario.active{
     transform: rotate(45deg);
 }
+
+.contenedor-boton .boton-abrir-formulario img{
+    width: 100%;
+    max-width: 30px;
+    margin-bottom: 20px;
+    position: relative;
+    top: 5px;
+}
 /*---------------Formulario de tarjeta---------------*/
 
 .formularioTarjeta{
@@ -229,7 +237,7 @@ body {
 .formularioTarjeta input:focus,
 .formularioTarjeta select:focus{
     outline: rgb(4,4,4);
-    box-shadow: 1px 7px 10px -5px rgba(90, 116, 148, 0.3);
+    box-shadow: 1px 7px 10px -5px rgba(237, 78, 189, 0.3);
 }
 
 .formularioTarjeta input{
@@ -244,7 +252,6 @@ body {
 
 .formularioTarjeta .expiracion{
     width: 100%;
-
 }
 
 .formularioTarjeta .ccv{
