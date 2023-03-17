@@ -28,3 +28,9 @@ for(let i = 1; i <=12; i++){
 } 
 
 /*--------Select del año--------*/
+const yearActual = new Date().getFullYear();
+for (let i = yearActual; i <= yearActual + 8; i ++){
+  opcion.value = i;
+  opcion.innerText = i;
+  formulario.selectYear.appendChild(opcion);
+}
