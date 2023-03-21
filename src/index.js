@@ -1,6 +1,6 @@
 /* eslint-disable eqeqeq */
 const validator = {
-  // ...
+// ...
 };
   
 export default validator;
@@ -17,9 +17,9 @@ const tarjeta = document.querySelector('#tarjeta'),
   ccv = document.querySelector('#tarjeta .ccv');
   
 /**volteamos la tarjeta para mostrar el frente */ 
-const mostrarFrente = (tarjetaGirar) => {
-  if(tarjetaGirar.classList.contains('active')){
-    tarjetaGirar.classList.remove('active');
+const mostrarFrente = (tarjetaAVoltear) => {
+  if(tarjetaAVoltear.classList.contains('active')){
+    tarjetaAVoltear.classList.remove('active');
   }
 }
   
@@ -45,7 +45,7 @@ for(let i = 1; i <=12; i++){
 /*--------Select del año--------*/
 const yearActual = new Date().getFullYear();
 for (let i = yearActual; i <= yearActual + 8; i ++){
-  opcion = document.createElement('option');
+  const opcion = document.createElement('option');
   opcion.value = i;
   opcion.innerText = i;
   formulario.selectYear.appendChild(opcion);
@@ -59,8 +59,6 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
     /*para eliminar los espacios en blancos*/
     /*Expresiones regulars https://regexr.com/ */
     .replace(/\s/g, '')
-    /*Eliminar las letras */
-    .replace(/\D/g, '')
     /*Espacio cada 4 numeros */
     .replace(/([0-9]{4})/g, '$1 ')
     /**Elimina el ultimo espaciado */
@@ -87,6 +85,7 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
   }
   /* voltear la tajerjeta para que se vea el frente*/
   mostrarFrente(tarjeta);
+  
 });
   
 /*--------input nombre de la tarjeta--------*/
@@ -100,19 +99,19 @@ formulario.inputNombre.addEventListener('keyup', (e) => {
     nombreTarjeta.textContent = 'Maria ';
   }
   
-  mostrarFrente(tarjeta);
+  mostrarFrente();
 });
   
 /*--------select mes-------*/
   
 formulario.selectMes.addEventListener('change', (e) =>{
   mesExpiracion.textContent = e.target.value;
-  mostrarFrente(tarjeta);
+  mostrarFrente();
 });
   
 formulario.selectYear.addEventListener('change', (e) =>{
   yearExpiracion.textContent = e.target.value;
-  mostrarFrente(tarjeta);
+  mostrarFrente();
 });
   
 /*--------select ccv-------*/
