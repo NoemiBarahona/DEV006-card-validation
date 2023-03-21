@@ -1,5 +1,4 @@
 export function validarTarjetaCredito(numeroTarjeta) {  
-  console.log("pruebaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa")
   // Verifique que la entrada sea un número válido de Visa o Mastercard
   if (/^4[0-9]{12}(?:[0-9]{3})?$/.test(numeroTarjeta)) {
     // Valida numero Visa tarjeta
