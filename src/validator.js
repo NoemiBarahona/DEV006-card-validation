@@ -1,11 +1,4 @@
-import validator from './validator.js';
-
-print(validator);
-
-function validarTarjetaCredito(numeroTarjeta) {
-  // Eliminar todos los caracteres que no sean dígitos de la entrada
-  numeroTarjeta = numeroTarjeta.replace(/\D/g, '');
-  
+function validarTarjetaCredito(numeroTarjeta) {  
   // Verifique que la entrada sea un número válido de Visa o Mastercard
   if (/^4[0-9]{12}(?:[0-9]{3})?$/.test(numeroTarjeta)) {
     // Valida numero Visa tarjeta
@@ -17,6 +10,10 @@ function validarTarjetaCredito(numeroTarjeta) {
     // Invalidar numero tarjeta
     return false;
   }
+}
+
+function limpiarInputTarjeta (tarjetaInput) {
+  tarjetaInput.value = tarjetaInput.value.replace(/\D/g, '');
 }
 
 function luhnCheck(numeroTarjeta) {
@@ -45,5 +42,5 @@ function luhnCheck(numeroTarjeta) {
   }
   
   // El número tarjeta es válido si la suma es múltiplo de 10
-  return (suma % 10 == 0);
+  return (suma % 10 === 0);
 }

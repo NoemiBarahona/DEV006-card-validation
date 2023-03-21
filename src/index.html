@@ -61,8 +61,9 @@
         </div>
 <!--Formulario-->
         <form action="" id="formularioTarjeta" class="formularioTarjeta">
-          <div class="grupo">
 <!-- Grupo tarjeta-->
+          <div class="grupo">
+            <p id="resultado"></p>
             <label for="inputNumero">Número tarjeta</label>
             <input type="text" id="inputNumero" maxlength="19" autocomplete="off">
           </div>
@@ -96,11 +97,14 @@
               <input type="text" id="inputCCV" maxlength="3">
             </div>
           </div>
-          <button type="submit" class="botonEnviar">Enviar</button>
+          <button type="submit" class="botonEnviar">Enviar
+          </button>
         </form>
        </div>
     </main>
     <footer></footer>
-    <script src="index.js" type="module"></script>
+    <script type="text/javascript" src="validator.js"></script>
+    <script type="text/javascript" src="index.js"></script>
+    <script type="text/javascript" src="seba.js"></script>
   </body>
 </html>

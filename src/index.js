@@ -1,10 +1,3 @@
-/* eslint-disable eqeqeq */
-const validator = {
-// ...
-};
-  
-export default validator;
-  
 const tarjeta = document.querySelector('#tarjeta'),
   botonAbrirFormulario = document.querySelector('#boton-abrir-formulario'),
   formulario = document.querySelector('#formularioTarjeta'),
@@ -17,12 +10,12 @@ const tarjeta = document.querySelector('#tarjeta'),
   ccv = document.querySelector('#tarjeta .ccv');
   
 /**volteamos la tarjeta para mostrar el frente */ 
-const mostrarFrente = (tarjetaAVoltear) => {
-  if(tarjetaAVoltear.classList.contains('active')){
-    tarjetaAVoltear.classList.remove('active');
+const mostrarFrente = (VoltearTarjeta) => {
+  if(VoltearTarjeta.classList.contains('active')){
+    VoltearTarjeta.classList.remove('active');
   }
 }
-  
+
 /*--------rotacion de la tarjeta-------*/
 tarjeta.addEventListener('click', () => {
   tarjeta.classList.toggle('active');
@@ -52,9 +45,11 @@ for (let i = yearActual; i <= yearActual + 8; i ++){
 }
   
 /*--------input numero de tarjeta--------*/
-formulario.inputNumero.addEventListener('keyup', (e) => {
+formulario.inputNumero.addEventListener('input', (e) => {
+  limpiarInputTarjeta(e.target);
   const valorInput = e.target.value;
-  
+  const isValidTarjeta = validarTarjetaCredito(e.target.value);
+  document.querySelector('#resultado').innerHTML = isValidTarjeta
   formulario.inputNumero.value = valorInput
     /*para eliminar los espacios en blancos*/
     /*Expresiones regulars https://regexr.com/ */
@@ -66,26 +61,26 @@ formulario.inputNumero.addEventListener('keyup', (e) => {
   
   numeroTarjeta.textContent = valorInput;
   
-  if(valorInput == ''){
+  if(valorInput === ''){
     numeroTarjeta.textContent = '#### #### #### ####';
   
     logoMarca.innerHTML= '';
   }
   
-  if(valorInput[0] == 4){
+  if(valorInput[0] === 4){
     logoMarca.innerHTML = '';
     const imagen = document.createElement('img');
     imagen.src = '../img/logos/visa.png';
     logoMarca.appendChild(imagen);
-  } else if (valorInput[0] == 5){
+  } else if (valorInput[0] === 5){
     logoMarca.innerHTML = '';
     const imagen = document.createElement('img');
     imagen.src = '../img/logos/masterCard.png';
     logoMarca.appendChild(imagen);
   }
-  /* voltear la tajerjeta para que se vea el frente*/
+  /* voltear la tarjeta para que se vea el frente*/
   mostrarFrente(tarjeta);
-  
+
 });
   
 /*--------input nombre de la tarjeta--------*/
@@ -95,23 +90,23 @@ formulario.inputNombre.addEventListener('keyup', (e) => {
   nombreTarjeta.textContent = valorInput;
   firma.textContent =valorInput;
   
-  if(valorInput == ''){
+  if(valorInput === ''){
     nombreTarjeta.textContent = 'Maria ';
   }
   
-  mostrarFrente();
+  mostrarFrente(tarjeta);
 });
   
 /*--------select mes-------*/
   
 formulario.selectMes.addEventListener('change', (e) =>{
   mesExpiracion.textContent = e.target.value;
-  mostrarFrente();
+  mostrarFrente(tarjeta);
 });
   
 formulario.selectYear.addEventListener('change', (e) =>{
   yearExpiracion.textContent = e.target.value;
-  mostrarFrente();
+  mostrarFrente(tarjeta);
 });
   
 /*--------select ccv-------*/
