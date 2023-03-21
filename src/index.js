@@ -1,3 +1,5 @@
+import { limpiarInputTarjeta, validarTarjetaCredito } from "./validator";
+
 const tarjeta = document.querySelector('#tarjeta'),
   botonAbrirFormulario = document.querySelector('#boton-abrir-formulario'),
   formulario = document.querySelector('#formularioTarjeta'),
@@ -66,13 +68,13 @@ formulario.inputNumero.addEventListener('input', (e) => {
   
     logoMarca.innerHTML= '';
   }
-  
-  if(valorInput[0] === 4){
+  /* console.log("funciona", valorInput[0])*/
+  if(valorInput[0] === "4"){
     logoMarca.innerHTML = '';
     const imagen = document.createElement('img');
     imagen.src = '../img/logos/visa.png';
     logoMarca.appendChild(imagen);
-  } else if (valorInput[0] === 5){
+  } else if (valorInput[0] === "5"){
     logoMarca.innerHTML = '';
     const imagen = document.createElement('img');
     imagen.src = '../img/logos/masterCard.png';
