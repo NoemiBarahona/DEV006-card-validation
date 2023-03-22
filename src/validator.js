@@ -1,4 +1,4 @@
-export function validarTarjetaCredito(numeroTarjeta) {  
+export function isValid(numeroTarjeta) {
   // Verifique que la entrada sea un número válido de Visa o Mastercard
   if (/^4[0-9]{12}(?:[0-9]{3})?$/.test(numeroTarjeta)) {
     // Valida numero Visa tarjeta
@@ -43,4 +43,13 @@ function luhnCheck(numeroTarjeta) {
   
   // El número tarjeta es válido si la suma es múltiplo de 10
   return (suma % 10 === 0);
+}
+
+export function maskify(textContent) {
+  const numeroOculto = textContent.substring(0, textContent.length - 4).replace(/./g, "#") + textContent.substring(textContent.length - 4);
+  return numeroOculto
+}
+export function espaciado(numeroOcultoEspaciado){
+  const OcultaEspaciado = numeroOcultoEspaciado.replace(/(.{4})/g, '$1 ');
+  return OcultaEspaciado
 }

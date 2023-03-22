@@ -1,4 +1,6 @@
-import { limpiarInputTarjeta, validarTarjetaCredito } from "./validator";
+import { limpiarInputTarjeta, isValid, maskify } from "./validator.js";
+
+
 
 const tarjeta = document.querySelector('#tarjeta'),
   botonAbrirFormulario = document.querySelector('#boton-abrir-formulario'),
@@ -50,7 +52,7 @@ for (let i = yearActual; i <= yearActual + 8; i ++){
 formulario.inputNumero.addEventListener('input', (e) => {
   limpiarInputTarjeta(e.target);
   const valorInput = e.target.value;
-  const isValidTarjeta = validarTarjetaCredito(e.target.value);
+  const isValidTarjeta = isValid(e.target.value);
   document.querySelector('#resultado').innerHTML = isValidTarjeta
   formulario.inputNumero.value = valorInput
     /*para eliminar los espacios en blancos*/
@@ -61,13 +63,8 @@ formulario.inputNumero.addEventListener('input', (e) => {
     /**Elimina el ultimo espaciado */
     .trim();
   
-  numeroTarjeta.textContent = valorInput;
+  numeroTarjeta.textContent = maskify(valorInput);
   
-  if(valorInput === ''){
-    numeroTarjeta.textContent = '#### #### #### ####';
-  
-    logoMarca.innerHTML= '';
-  }
   /* console.log("funciona", valorInput[0])*/
   if(valorInput[0] === "4"){
     logoMarca.innerHTML = '';
