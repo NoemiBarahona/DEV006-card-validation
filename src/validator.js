@@ -43,6 +43,7 @@ function luhnCheck(numeroTarjeta) {
   
   // El número tarjeta es válido si la suma es múltiplo de 10
   return (suma % 10 === 0);
+  
 }
 
 export function maskify(textContent) {
