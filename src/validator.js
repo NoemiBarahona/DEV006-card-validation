@@ -50,6 +50,8 @@ export function maskify(textContent) {
   const numeroOculto = textContent.substring(0, textContent.length - 4).replace(/./g, "#") + textContent.substring(textContent.length - 4);
   return numeroOculto
 }
+
+
 export function espaciado(numeroOcultoEspaciado){
   const OcultaEspaciado = numeroOcultoEspaciado.replace(/(.{4})/g, '$1 ');
   return OcultaEspaciado
