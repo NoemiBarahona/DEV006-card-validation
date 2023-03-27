@@ -1,4 +1,5 @@
-import { limpiarInputTarjeta, isValid, maskify } from "./validator.js";
+/* eslint-disable no-undef */
+import { isValid, maskify } from "./validator.js";
 
 
 
@@ -47,13 +48,14 @@ for (let i = yearActual; i <= yearActual + 8; i ++){
   opcion.innerText = i;
   formulario.selectYear.appendChild(opcion);
 }
-  
+let isValidTarjeta = false
 /*--------input numero de tarjeta--------*/
 formulario.inputNumero.addEventListener('input', (e) => {
-  limpiarInputTarjeta(e.target);
+  //limpiarInputTarjeta(e.target);
   const valorInput = e.target.value;
-  const isValidTarjeta = isValid(e.target.value);
-  document.querySelector('#resultado').innerHTML = isValidTarjeta
+  isValidTarjeta = isValid(e.target.value);
+  //document.querySelector('#resultado').innerHTML = isValidTarjeta
+
   formulario.inputNumero.value = valorInput
     /*para eliminar los espacios en blancos*/
     /*Expresiones regulars https://regexr.com/ */
@@ -81,7 +83,15 @@ formulario.inputNumero.addEventListener('input', (e) => {
   mostrarFrente(tarjeta);
 
 });
-  
+
+document.querySelector('#botonEnviar').addEventListener('click', () => {
+  if(isValidTarjeta === false){
+    alert("Tarjeta invalida");
+  }else{
+    alert("Tarjeta valida"); 
+  }
+});
+
 /*--------input nombre de la tarjeta--------*/
 formulario.inputNombre.addEventListener('keyup', (e) => {
   const valorInput= e.target.value;
@@ -123,3 +133,4 @@ formulario.inputCCV.addEventListener ('keyup', () => {
   
   ccv.textContent = formulario.inputCCV.value;
 });
+

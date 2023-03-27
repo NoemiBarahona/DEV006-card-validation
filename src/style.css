@@ -19,6 +19,7 @@ body {
     align-items: center;
 }
 /*Estilos de la tarjeta*/
+
 .tarjeta {
     /*Tamaño de la tarjeta*/
     width: 100%;
@@ -40,6 +41,7 @@ body {
     Asi puedp marcar que se puede ver en que orden*/
     z-index: 2 ;
 }
+
 .tarjeta.active{
     /*Para que gire la tarjeta en 180g al poner la mamno sobre la tarjeta*/
     transform: rotateY(180deg); 
@@ -197,7 +199,7 @@ body {
     background: white;
     width: 100%;
     max-width: 700px;
-    padding: 150px 30px 30px 30px;
+    padding: 100px 30px 70px 30px;
     border-radius: 10px;
     position: relative;
     top: -150px;
@@ -218,8 +220,7 @@ body {
 }
 
 .formularioTarjeta input,
-.formularioTarjeta select,
-.botonEnviar{
+.formularioTarjeta select{
     border: 2px solid #ced6e0;
     font-size: 18px;
     height: 50px;
@@ -263,8 +264,20 @@ body {
     width: 100%;
     margin-right: 15px;
 }
+.botonEnviar{
+    border: 2px solid #ced6e0;
+    font-size: 18px;
+    height: 50px;
+    width: 80%;
+    padding: 5px;
+    transition: 3.s ease all;
+    border-radius: 5px;
+    z-index: 4;
+    position: relative;
+    top: -220px;
+}
 
-.formularioTarjeta .botonEnviar{
+.botonEnviar{
     border: none;
     padding: 10px;
     font-size: 22px;
@@ -274,6 +287,7 @@ body {
     cursor: pointer;
 }
 
-.formularioTarjeta .botonEnviar:hover{
+.botonEnviar:hover{
     background: rgb(54, 25, 149);
 }
+
