@@ -1,4 +1,5 @@
 /* eslint-disable no-undef */
+
 import { isValid, maskify } from "./validator.js";
 
 
