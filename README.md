@@ -15,7 +15,6 @@ Los principales usuarios de este producto son los clientes de la tienda de arte 
 
 ## Objetivos de los Usuarios
 Los usuarios buscan:
-
 -Completar el proceso de pago de manera eficiente.
 -Sentir una conexión con la marca a través de elementos artísticos en la interfaz.
 - Verificar la validez de su tarjeta de crédito antes de finalizar la compra.
@@ -29,6 +28,6 @@ El proyecto aborda estos problemas al:
 
 ## Prototipos
 A continuación, se muestran los enlaces a los prototipos creados en Figma:
-- Prototipo de Tarjeta de Crédito Alta: https://www.figma.com/file/psTegKPykYwtiu3z2wkQcn/Tarjeta-de-cr%C3%A9dito-alta?t=WsRyuelfejOIOtFg-6
-
 - Prototipo de Tarjeta de Crédito Alta: https://www.figma.com/file/h9DXqWeIeJiEkNgbo95XQU/tarjeta-de-cr%C3%A9dito-baja?t=WsRyuelfejOIOtFg-6
+
+- Prototipo de Tarjeta de Crédito Alta:  https://www.figma.com/file/psTegKPykYwtiu3z2wkQcn/Tarjeta-de-cr%C3%A9dito-alta?t=WsRyuelfejOIOtFg-6
